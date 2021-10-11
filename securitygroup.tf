@@ -8,7 +8,7 @@ module "public_bastion_sg" {
   description = "this security group for ec2"
   vpc_id = module.vpc.vpc_id
   #ingress rules
-  ingress-rules = ["ssh-tcp","http-80-tcp"]
+  ingress_rules = ["ssh-tcp","http-80-tcp"]
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
   egress_rules = ["all-all"]
   tags = local.common_tags
