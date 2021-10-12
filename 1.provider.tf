@@ -7,6 +7,11 @@ terraform {
       version = "~> 3.0"
     }
   }
+    backend "s3" {
+          bucket = "terraformlearngopal"
+          key = "project-vpc/terraform.tfstate"
+          region = "us-east-2"
+                }
 }
 
 # Provider Block
